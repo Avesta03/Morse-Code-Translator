@@ -47,11 +47,11 @@ def decrypt(message):
         return decipher 
 
 def main():
-    message = 'AVESTA'
+    message = input("Enter what you seek to encrypt: ").upper()
     result = encrypt(message.upper())
     print(result)
 
-    message = '.- ...- . ... - .-'
+    message = input("Enter what you wish to decrypt: ")
     result = decrypt(message)
     print(result)
 
