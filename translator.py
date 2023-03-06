@@ -46,5 +46,14 @@ def decrypt(message):
 
         return decipher 
 
+def main():
+    message = 'AVESTA'
+    result = encrypt(message.upper())
+    print(result)
 
+    message = '.- ...- . ... - .-'
+    result = decrypt(message)
+    print(result)
 
+if __name__ == '__main__':
+    main()
