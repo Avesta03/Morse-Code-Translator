@@ -22,15 +22,12 @@ def encrypt(message):
 def decrypt(message):
 
     message += ' ' # Adding an extra space at the end to access the last bit of code
-
     decipher = ''
     citext = ''
     for letter in message:
 
-        if (letter != ''): # Checking for space here
-
-            i = 0 # Created a counter to keep track of spaces
-
+        if (letter != ' '): # Checking for space here - note how a missing space earlier ruined the whole code!
+            i = 0 # Created a counter to keep track of spaces (initialising a counter before the for loop) - needed to be in the 'if' loop and not outside
             citext += letter # Stores code of a single character
 
         else:
@@ -44,7 +41,7 @@ def decrypt(message):
                 decipher += list(MORSE_DICT.keys())[list(MORSE_DICT.values()).index(citext)]
                 citext = ''
 
-        return decipher 
+    return decipher 
 
 def main():
     message = input("Enter what you seek to encrypt: ").upper()
